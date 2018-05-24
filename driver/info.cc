@@ -32,6 +32,7 @@
 */
 
 #include "driver.h"
+#include "./../include/sys/m_string.h"
 
 #define MYINFO_SET_ULONG(val) \
 do { \

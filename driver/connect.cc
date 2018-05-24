@@ -34,6 +34,7 @@
 #include "driver.h"
 #include "installer.h"
 #include "stringutil.h"
+#include "./../include/sys/m_string.h"
 
 #ifndef CLIENT_NO_SCHEMA
 # define CLIENT_NO_SCHEMA      16

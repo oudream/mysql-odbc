@@ -32,16 +32,16 @@
 /*
  * From configure.cmake, in order of appearance 
  */
-/* #undef HAVE_LLVM_LIBCPP */
+#define HAVE_LLVM_LIBCPP 1
 /* #undef _LARGEFILE_SOURCE */
 
 /* Libraries */
-#define HAVE_LIBM 1
+/* #undef HAVE_LIBM */
 /* #undef HAVE_LIBNSL */
-#define HAVE_LIBCRYPT 1
+/* #undef HAVE_LIBCRYPT */
 /* #undef HAVE_LIBSOCKET */
-#define HAVE_LIBDL 1
-#define HAVE_LIBRT 1
+/* #undef HAVE_LIBDL */
+/* #undef HAVE_LIBRT */
 /* #undef HAVE_LIBWRAP */
 
 /* Header files */
@@ -49,11 +49,11 @@
 #define HAVE_ARPA_INET_H 1
 #define HAVE_DLFCN_H 1
 #define HAVE_EXECINFO_H 1
-#define HAVE_FPU_CONTROL_H 1
+/* #undef HAVE_FPU_CONTROL_H */
 #define HAVE_GRP_H 1
 /* #undef HAVE_IEEEFP_H */
 #define HAVE_LANGINFO_H 1
-#define HAVE_MALLOC_H 1
+/* #undef HAVE_MALLOC_H */
 #define HAVE_NETINET_IN_H 1
 #define HAVE_POLL_H 1
 #define HAVE_PWD_H 1
@@ -66,19 +66,19 @@
 #define HAVE_SYS_SOCKET_H 1
 #define HAVE_TERM_H 1
 #define HAVE_TERMIOS_H 1
-#define HAVE_TERMIO_H 1
+/* #undef HAVE_TERMIO_H */
 #define HAVE_UNISTD_H 1
 #define HAVE_SYS_WAIT_H 1
 #define HAVE_SYS_PARAM_H 1
 #define HAVE_FNMATCH_H 1
 #define HAVE_SYS_UN_H 1
-/* #undef HAVE_VIS_H */
+#define HAVE_VIS_H 1
 #define HAVE_SASL_SASL_H 1
 
 /* Libevent */
 /* #undef HAVE_DEVPOLL */
 /* #undef HAVE_SYS_DEVPOLL_H */
-#define HAVE_SYS_EPOLL_H 1
+/* #undef HAVE_SYS_EPOLL_H */
 #define HAVE_TAILQFOREACH 1
 
 /* Functions */
@@ -87,7 +87,7 @@
 /* #undef HAVE_PRINTSTACK */
 #define HAVE_INDEX 1
 #define HAVE_CLOCK_GETTIME 1
-#define HAVE_CUSERID 1
+/* #undef HAVE_CUSERID */
 /* #undef HAVE_DIRECTIO */
 #define HAVE_FTRUNCATE 1
 /* #undef HAVE_COMPRESS */
@@ -96,8 +96,8 @@
 #define HAVE_FCHMOD 1
 #define HAVE_FCNTL 1
 #define HAVE_FDATASYNC 1
-#define HAVE_DECL_FDATASYNC 1 
-#define HAVE_FEDISABLEEXCEPT 1
+/* #undef HAVE_DECL_FDATASYNC */
+/* #undef HAVE_FEDISABLEEXCEPT */
 #define HAVE_FSEEKO 1
 #define HAVE_FSYNC 1
 /* #undef HAVE_GETHOSTBYADDR_R */
@@ -110,23 +110,23 @@
 #define HAVE_GETRLIMIT 1
 #define HAVE_GETRUSAGE 1
 #define HAVE_INITGROUPS 1
-/* #undef HAVE_ISSETUGID */
+#define HAVE_ISSETUGID 1
 #define HAVE_GETUID 1
 #define HAVE_GETEUID 1
 #define HAVE_GETGID 1
 #define HAVE_GETEGID 1
 /* #undef HAVE_LSTAT */
 #define HAVE_MADVISE 1
-#define HAVE_MALLOC_INFO 1
-#define HAVE_MEMRCHR 1
+/* #undef HAVE_MALLOC_INFO */
+/* #undef HAVE_MEMRCHR */
 #define HAVE_MLOCK 1
 #define HAVE_MLOCKALL 1
-#define HAVE_MMAP64 1
+/* #undef HAVE_MMAP64 */
 #define HAVE_POLL 1
-#define HAVE_POSIX_FALLOCATE 1
+/* #undef HAVE_POSIX_FALLOCATE */
 #define HAVE_POSIX_MEMALIGN 1
 #define HAVE_PREAD 1
-#define HAVE_PTHREAD_CONDATTR_SETCLOCK 1
+/* #undef HAVE_PTHREAD_CONDATTR_SETCLOCK */
 #define HAVE_PTHREAD_SIGMASK 1
 /* #undef HAVE_READLINK */
 /* #undef HAVE_REALPATH */
@@ -135,22 +135,22 @@
 #define HAVE_SLEEP 1
 #define HAVE_STPCPY 1
 #define HAVE_STPNCPY 1
-/* #undef HAVE_STRLCPY */
+#define HAVE_STRLCPY 1
 /* #undef HAVE_STRNLEN */
-/* #undef HAVE_STRLCAT */
+#define HAVE_STRLCAT 1
 #define HAVE_STRSIGNAL 1
-/* #undef HAVE_FGETLN */
+#define HAVE_FGETLN 1
 #define HAVE_STRSEP 1
 /* #undef HAVE_TELL */
 #define HAVE_VASPRINTF 1
-#define HAVE_MEMALIGN 1
+/* #undef HAVE_MEMALIGN */
 #define HAVE_NL_LANGINFO 1
 /* #undef HAVE_HTONLL */
 #define DNS_USE_CPU_CLOCK_FOR_ID 1
-#define HAVE_EPOLL 1
+/* #undef HAVE_EPOLL */
 /* #undef HAVE_EVENT_PORTS */
 #define HAVE_INET_NTOP 1
-/* #undef HAVE_WORKING_KQUEUE */
+#define HAVE_WORKING_KQUEUE 1
 #define HAVE_TIMERADD 1
 #define HAVE_TIMERCLEAR 1
 #define HAVE_TIMERCMP 1
@@ -166,15 +166,15 @@
 #define HAVE_LRAND48 1
 #define GWINSZ_IN_SYS_IOCTL 1
 #define FIONREAD_IN_SYS_IOCTL 1
-/* #undef FIONREAD_IN_SYS_FILIO */
+#define FIONREAD_IN_SYS_FILIO 1
 /* #undef HAVE_SIGEV_THREAD_ID */
 /* #undef HAVE_SIGEV_PORT */
 /* #undef HAVE_LOG2 */
 
 #define HAVE_ISINF 1
 
-/* #undef HAVE_KQUEUE_TIMERS */
-#define HAVE_POSIX_TIMERS 1
+#define HAVE_KQUEUE_TIMERS 1
+/* #undef HAVE_POSIX_TIMERS */
 
 /* Endianess */
 /* #undef WORDS_BIGENDIAN */
@@ -189,9 +189,9 @@
 #define SIZEOF_OFF_T     8
 #define SIZEOF_TIME_T    8
 /* #undef HAVE_UINT */
-#define HAVE_ULONG 1
+/* #undef HAVE_ULONG */
 #define HAVE_U_INT32_T 1
-/* #undef HAVE_STRUCT_TIMESPEC */
+#define HAVE_STRUCT_TIMESPEC 1
 
 /* Support for tagging symbols with __attribute__((visibility("hidden"))) */
 #define HAVE_VISIBILITY_HIDDEN 1
@@ -218,8 +218,8 @@
 /* #undef HAVE_IPV6 */
 
 /* #undef ss_family */
-/* #undef HAVE_SOCKADDR_IN_SIN_LEN */
-/* #undef HAVE_SOCKADDR_IN6_SIN6_LEN */
+#define HAVE_SOCKADDR_IN_SIN_LEN 1
+#define HAVE_SOCKADDR_IN6_SIN6_LEN 1
 
 /*
  * Platform specific CMake files
@@ -229,7 +229,7 @@
 /* #undef HAVE_SOLARIS_LARGE_PAGES */
 /* #undef HAVE_SOLARIS_ATOMIC */
 /* #undef HAVE_SOLARIS_STYLE_GETHOST */
-#define SYSTEM_TYPE "Linux"
+#define SYSTEM_TYPE "Darwin"
 /* Windows stuff, mostly functions, that have Posix analogs but named differently */
 /* #undef IPPROTO_IPV6 */
 /* #undef IPV6_V6ONLY */
@@ -378,7 +378,7 @@
 #define HAVE_SYS_GETTID 1
 /* #undef HAVE_PTHREAD_GETTHREADID_NP */
 /* #undef HAVE_PTHREAD_SETNAME_NP */
-#define HAVE_INTEGER_PTHREAD_SELF 1
+/* #undef HAVE_INTEGER_PTHREAD_SELF */
 
 /* Platform-specific C++ compiler behaviors we rely upon */
 
@@ -456,7 +456,7 @@
 /* For --secure-file-priv */
 /* #undef DEFAULT_SECURE_FILE_PRIV_DIR */
 /* #undef DEFAULT_SECURE_FILE_PRIV_EMBEDDED_DIR */
-#define HAVE_LIBNUMA 1
+/* #undef HAVE_LIBNUMA */
 
 /* For default value of --early_plugin_load */
 /* #undef DEFAULT_EARLY_PLUGIN_LOAD */

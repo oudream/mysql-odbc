@@ -35,7 +35,7 @@
 
 #include "driver.h"
 #include "catalog.h"
-
+#include "./../include/sys/m_string.h"
 
 /*
   @type    : internal

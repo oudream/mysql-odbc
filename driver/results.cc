@@ -35,6 +35,7 @@
 #include <errmsg.h>
 #include <ctype.h>
 #include <locale.h>
+#include "./../include/sys/m_string.h"
 
 #define SQL_MY_PRIMARY_KEY 1212
 

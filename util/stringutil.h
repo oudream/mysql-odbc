@@ -40,6 +40,7 @@
 extern "C" {
 #endif
 
+#include <ctype.h>
 #include <string.h>
 #include <sql.h>
 #include <sqlext.h>

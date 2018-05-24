@@ -648,13 +648,13 @@ SQLRETURN SQL_API my_SQLFreeStmtExtended(SQLHSTMT hstmt,SQLUSMALLINT fOption,
     }
     else
     {
-      if(stmt->result && stmt->result->field_alloc
+      if(stmt->result
 #if (!MYSQLCLIENT_STATIC_LINKING || !MYSQL8)
-         && stmt->result->field_alloc->pre_alloc
+         && stmt->result->field_alloc.pre_alloc
 #endif
          )
       {
-        free_root(stmt->result->field_alloc, MYF(0));
+        free_root(& stmt->result->field_alloc, MYF(0));
       }
 
       x_free(stmt->result);

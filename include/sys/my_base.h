@@ -25,6 +25,11 @@
 // You should have received a copy of the GNU General Public License 
 // along with this program; if not, write to the Free Software Foundation, Inc., 
 // 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA 
+#ifndef _my_base_h
+#define _my_base_h
+
+#define 	HA_ERR_FIRST   120
+
 #define HA_ERR_LOCK_WAIT_TIMEOUT 146
 #define HA_ERR_LOCK_TABLE_FULL   147
 #define HA_ERR_READ_ONLY_TRANSACTION 148 /* Updates not allowed */
@@ -203,6 +208,12 @@ enum key_range_flags {
   USE_INDEX_STATISTICS= 1 << 9
 };
 
+typedef enum ha_rkey_function {
+    HA_READ_KEY_EXACT, HA_READ_KEY_OR_NEXT, HA_READ_KEY_OR_PREV, HA_READ_AFTER_KEY,
+    HA_READ_BEFORE_KEY, HA_READ_PREFIX, HA_READ_PREFIX_LAST, HA_READ_PREFIX_LAST_OR_PREV,
+    HA_READ_MBR_CONTAIN, HA_READ_MBR_INTERSECT, HA_READ_MBR_WITHIN, HA_READ_MBR_DISJOINT,
+    HA_READ_MBR_EQUAL, HA_READ_INVALID = -1
+} ha_rkey_function;
 
 typedef struct st_key_range
 {

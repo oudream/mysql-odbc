@@ -34,6 +34,7 @@
 #include "driver.h"
 #include "mysqld_error.h"
 #include "errmsg.h"
+#include "./../include/sys/m_string.h"
 
 /*
   @type    : myodbc3 internal error structure

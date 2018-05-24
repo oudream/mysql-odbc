@@ -32,6 +32,7 @@
 */
 
 #include "driver.h"
+#include "./../include/sys/m_string.h"
 
 
 #define NOT_IMPLEMENTED \

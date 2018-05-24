@@ -66,22 +66,23 @@ extern "C" {
 #define MY_PUT_MB2(s, code)   { (s)[0]= code >> 8; (s)[1]= code & 0xFF; }
 #endif
 
-
-
-typedef struct unicase_info_char_st
-{
-  uint32 toupper;
-  uint32 tolower;
-  uint32 sort;
+#ifndef D_MY_UNICASE_CHARACTER
+#define D_MY_UNICASE_CHARACTER
+typedef struct MY_UNICASE_CHARACTER {
+	uint32 toupper;
+	uint32 tolower;
+	uint32 sort;
 } MY_UNICASE_CHARACTER;
+#endif
 
-
+#ifndef D_unicase_info_st
+#define D_unicase_info_st
 typedef struct unicase_info_st
 {
   my_wc_t maxchar;
-  const MY_UNICASE_CHARACTER **page;
+  const struct MY_UNICASE_CHARACTER **page;
 } MY_UNICASE_INFO;
-
+#endif
 
 extern MY_UNICASE_INFO my_unicase_default;
 extern MY_UNICASE_INFO my_unicase_turkish;
@@ -92,22 +93,25 @@ extern MY_UNICASE_INFO my_unicase_unicode520;
 #define MY_UCA_MAX_WEIGHT_SIZE 8
 #define MY_UCA_WEIGHT_LEVELS   1
 
+#ifndef D_my_contraction_t
+#define D_my_contraction_t
 typedef struct my_contraction_t
 {
   my_wc_t ch[MY_UCA_MAX_CONTRACTION];   /* Character sequence              */
   uint16 weight[MY_UCA_MAX_WEIGHT_SIZE];/* Its weight string, 0-terminated */
   my_bool with_context;
 } MY_CONTRACTION;
+#endif
 
-
-
+#ifndef D_my_contraction_list_t
+#define D_my_contraction_list_t
 typedef struct my_contraction_list_t
 {
   size_t nitems;         /* Number of items in the list                  */
   MY_CONTRACTION *item;  /* List of contractions                         */
   char *flags;           /* Character flags, e.g. "is contraction head") */
 } MY_CONTRACTIONS;
-
+#endif
 
 my_bool my_uca_can_be_contraction_head(const MY_CONTRACTIONS *c, my_wc_t wc);
 my_bool my_uca_can_be_contraction_tail(const MY_CONTRACTIONS *c, my_wc_t wc);
@@ -116,6 +120,8 @@ uint16 *my_uca_contraction2_weight(const MY_CONTRACTIONS *c,
 
 
 /* Collation weights on a single level (e.g. primary, secondary, tertiarty) */
+#ifndef D_my_uca_level_info_st
+#define D_my_uca_level_info_st
 typedef struct my_uca_level_info_st
 {
   my_wc_t maxchar;
@@ -123,8 +129,10 @@ typedef struct my_uca_level_info_st
   uint16  **weights;
   MY_CONTRACTIONS contractions;
 } MY_UCA_WEIGHT_LEVEL;
+#endif
 
-
+#ifndef D_uca_info_st
+#define D_uca_info_st
 typedef struct uca_info_st
 {
   MY_UCA_WEIGHT_LEVEL level[MY_UCA_WEIGHT_LEVELS];
@@ -144,7 +152,7 @@ typedef struct uca_info_st
   my_wc_t last_variable;
 
 } MY_UCA_INFO;
-
+#endif
 
 
 extern MY_UCA_INFO my_uca_v400;
@@ -230,13 +238,15 @@ extern MY_UNI_CTYPE my_uni_ctype[256];
 #define MY_STRXFRM_REVERSE_LEVEL6  0x00200000 /* if reverse order for level6 */
 #define MY_STRXFRM_REVERSE_SHIFT   16
 
-
+#ifndef D_my_uni_idx_st
+#define D_my_uni_idx_st
 typedef struct my_uni_idx_st
 {
   uint16      from;
   uint16      to;
   const uchar *tab;
 } MY_UNI_IDX;
+#endif
 
 typedef struct
 {

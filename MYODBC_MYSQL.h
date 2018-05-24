@@ -79,8 +79,8 @@ typedef pthread_key_t thread_local_key_t;
 
 #include "include/sys/my_global.h"
 #include "include/sys/my_thread.h"
+#include "include/sys/my_sys.h"
 #include <mysql.h>
-#include "include/sys_main.h"
 #include <mysqld_error.h>
 #define myodbc_qsort my_qsort
 

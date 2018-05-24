@@ -44,6 +44,7 @@
 
 #include "driver.h"
 #include <locale.h>
+#include "./../include/sys/m_string.h"
 
 
 /* Sets affected rows everewhere where SQLRowCOunt could look for */

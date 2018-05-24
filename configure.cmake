@@ -724,6 +724,12 @@ CHECK_STRUCT_HAS_MEMBER("struct sockaddr_in" sin_len
 CHECK_STRUCT_HAS_MEMBER("struct sockaddr_in6" sin6_len
   "${CMAKE_EXTRA_INCLUDE_FILES}" HAVE_SOCKADDR_IN6_SIN6_LEN)
 
+#
+# Check if struct timespec is available.
+#
+CHECK_STRUCT_HAS_MEMBER ("struct timespec" tv_sec time.h HAVE_STRUCT_TIMESPEC)
+
+
 SET(CMAKE_EXTRA_INCLUDE_FILES)
 
 CHECK_INCLUDE_FILES(numa.h HAVE_NUMA_H)

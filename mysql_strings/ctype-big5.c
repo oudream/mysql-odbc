@@ -189,7 +189,6 @@ static const uchar sort_order_big5[]=
   (uchar) '\370',(uchar) '\371',(uchar) '\372',(uchar) '\373',(uchar) '\374',(uchar) '\375',(uchar) '\376',(uchar) '\377',
 };
 
-
 static const MY_UNICASE_CHARACTER cA2[256]=
 {
   /* A200-A20F */
@@ -665,7 +664,7 @@ static const MY_UNICASE_CHARACTER cC7[256]=
   {0,0,0},{0,0,0},{0,0,0},{0,0,0},{0,0,0},{0,0,0},{0,0,0},{0,0,0},
   {0,0,0},{0,0,0},{0,0,0},{0,0,0},{0,0,0},{0,0,0},{0,0,0},{0,0,0},
   /* C7A0-C7AF */
-  {0x0000,0x0000,0x0000}, 
+  {0x0000,0x0000,0x0000},
   {0xC7A1,0xC7A1,0x30E7},
   {0xC7A2,0xC7A2,0x30E8},
   {0xC7A3,0xC7A3,0x30E9},
